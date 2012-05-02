@@ -55,7 +55,6 @@
 .provided-by {
 	margin: auto;
 	max-width: none !important;
-	min-width: none;
 	width: auto !important;
 }
 
@@ -73,6 +72,10 @@
 	background: none !important;
 	padding-right: 0 !important;
 	position: relative;
+}
+
+.identity li {
+	white-space: nowrap;
 }
 
 .klout-topic .topic {
