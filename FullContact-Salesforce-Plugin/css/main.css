@@ -45,19 +45,61 @@
 	display: none;
 }
 
-/* fullcontact_box - on the view pages */
-#fullcontact_box { margin: 2px 8px 4px 8px; padding: 1px; }
+#fullcontact_box ul li {
+	margin-left: 0;
+}
 
-/* tweaks for FullContact powered by logo for space optimization */
-#contactInfo table:nth-child(2) { margin-top: -42px; }
-#contactInfo table:nth-child(2) span { color: #666; }
-#contactInfo table:nth-child(2) img { height: 26px; }
+/* @group Person.css Overrides */
 
-/* font size adjustments for consistency - as html output is very big and "ugly" */
-#contactInfo > table { font-size: 108% !important; padding: 0 !important; }
-#contactInfo > table td { color: #444 !important;  }
-#contactInfo #name { font-size: 122% !important; color: #222 !important; }
-#contactInfo #title { font-size: 116% !important; color: #333 !important; }
-#contactInfo #age, #contactInfo #location  { font-style: italic !important; }
-#contactInfo #socialProfiles { padding: 4px 0 2px 0 !important; }
-#contactInfo #position-company { font-style: italic !important; }
+.contact-card, 
+.provided-by {
+	margin: auto;
+	max-width: none !important;
+	min-width: none;
+	width: auto !important;
+}
+
+.contact-card {
+	background-color: transparent !important;
+	border: none !important;
+}
+
+.column {
+	display: table-cell;
+	padding: 0 20px;
+}
+
+.contact-pic {
+	background: none !important;
+	padding-right: 0 !important;
+	position: relative;
+}
+
+.klout-topic .topic {
+	margin-right: 10px;
+	margin-top: 10px;
+}
+
+.org {
+	list-style: disc;
+	margin-left: 25px !important;
+	padding: 5px 0 5px 5px !important;
+}
+
+.provided-by {
+	color: rgb(140,140,140);
+	padding: 20px;
+	text-align: right;
+}
+
+.provided-by h6 {
+	font-size: 13px;
+	font-weight: normal;
+}
+
+.provided-by img {
+	vertical-align: middle;
+	width: 100px;
+}
+
+/* @end */

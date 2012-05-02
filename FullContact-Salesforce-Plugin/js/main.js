@@ -107,7 +107,7 @@ function insert_fullcontact_box(email, page) {
         $('#fullcontact_box').html(error);
         return;
     } 
-
+    
     chrome.extension.sendRequest({method: 'getLocalStorage', key: 'fullcontact_apikey'}, function(response) {
         fullcontact_apikey = response.data;
         var xhr = new XMLHttpRequest();		
@@ -121,7 +121,8 @@ function insert_fullcontact_box(email, page) {
     			var r = xhr.responseText;
 
     			// insert the response into #fullcontact_box
-                $('#fullcontact_box').html(r);
+                var fcBox = $('#fullcontact_box').html(r);
+                $('head').append(fcBox.find('link'));
 
                 // If invalid API key - ask to enter it in the options page
                 if($('#fullcontact_box').find('title').text() == '403 - Invalid API Key') {
